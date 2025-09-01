@@ -25,7 +25,7 @@ Este repositorio contiene mi **Currículum interactivo** desarrollado como pági
 
 ## 🔹 Demo
 Puedes ver la página web en funcionamiento aquí:  
-[Mi CV Online]([https://tu-usuario.github.io/nombre-del-repositorio/](https://csuarezr2301.github.io/cvonline/)
+[Mi CV Online](https://csuarezr2301.github.io/cvonline/)
 
 ## 🔹 Contacto
 - 📧 Email: suricarmen@gmail.com  
