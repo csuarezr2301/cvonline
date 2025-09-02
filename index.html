@@ -3,242 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carmen Suárez Riaño - CV Online</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>CV Arcade - Carmen Suárez Riaño</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #e6f0fa; /* azul claro */
-      color: #1a2b4c; /* azul oscuro */
+      font-family: 'Press Start 2P', cursive;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
     }
-
-    /* Encabezado */
     header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 50px;
+      font-size: 24px;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      animation: flicker 2s infinite alternate;
     }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
     }
-    header p {
-      margin: 10px 0 0 0;
-      font-size: 1.3em;
-      font-weight: 400;
+    .menu button {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 30px;
+      font-size: 16px;
+      color: #fff;
+      background: transparent;
+      border: 2px solid #ff0;
+      cursor: pointer;
+      text-shadow: 0 0 5px #ff0, 0 0 10px #ff0;
+      transition: transform 0.2s ease;
+      animation: neonPulse 1.5s infinite;
     }
-
-    /* Navegación */
-    nav {
-      background-color: #2a5298;
-      text-align: center;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    .menu button:hover {
+      transform: scale(1.1);
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: 0.3s;
+    @keyframes neonPulse {
+      0%, 100% { text-shadow: 0 0 5px #ff0, 0 0 15px #ff0; }
+      50% { text-shadow: 0 0 20px #f0f, 0 0 40px #f0f; }
     }
-    nav a:hover {
-      color: #a3c4f3;
-    }
-
     section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+      display: none;
+      padding: 30px;
+      animation: fadeIn 1s;
     }
-
-    h2 {
-      color: #1a2b4c;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #4a90e2;
-      display: inline-block;
-      padding-bottom: 5px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+    .back-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: 2px solid #0ff;
+      background: transparent;
+      color: #0ff;
+      cursor: pointer;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      animation: flicker 1.5s infinite alternate;
     }
-    .card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 10px; }
-
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: #4a90e2;
-      color: white;
-      text-decoration: none;
-      border-radius: 7px;
-      margin: 5px 5px 0 0;
-      transition: 0.3s;
-    }
-    .button:hover { background-color: #1a63c4; }
-
     iframe {
-      width: 100%;
+      width: 80%;
       height: 400px;
       border: none;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-
-    /* Iconos de habilidades */
-    .skill {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    .skill i {
-      font-size: 24px;
-      color: #4a90e2;
-      width: 30px;
-      margin-right: 10px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2em; }
-      nav a { display: block; margin: 10px 0; }
+      margin-top: 20px;
+      box-shadow: 0 0 20px #f0f;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Carmen Suárez Riaño</h1>
+    <p>CV Arcade Edition</p>
+  </header>
 
-<header>
-  <h1>Carmen Suárez Riaño</h1>
-  <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)</p>
-</header>
-
-<nav>
-  <a href="#sobre-mi">Sobre mí</a>
-  <a href="#formacion">Formación</a>
-  <a href="#experiencia">Experiencia</a>
-  <a href="#habilidades">Habilidades</a>
-  <a href="#demoreel">DemoReel</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<section id="sobre-mi">
-  <h2>Sobre mí</h2>
-  <div class="card">
-    <p>Estudiante de DAM con experiencia en comunicación audiovisual y animación 3D/VFX. Creativa, organizada y con ganas de aprender en entornos profesionales de desarrollo.</p>
+  <div class="menu" id="menu">
+    <button onclick="showSection('experiencia')">▶ Experiencia</button>
+    <button onclick="showSection('habilidades')">▶ Habilidades</button>
+    <button onclick="showSection('idiomas')">▶ Idiomas</button>
+    <button onclick="showSection('formacion')">▶ Formación</button>
+    <button onclick="showSection('demoreel')">▶ DemoReel</button>
+    <button onclick="showSection('contacto')">▶ Contacto</button>
   </div>
-</section>
 
-<section id="formacion">
-  <h2>Formación</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
-      <p>IES Miguel Herrero (2023–Actualidad)</p>
-    </div>
-    <div class="card">
-      <h3>Carrera Profesional de Animación 3D y VFX</h3>
-      <p>CICE (2019–2021)</p>
-    </div>
-    <div class="card">
-      <h3>Grado en Comunicación Audiovisual</h3>
-      <p>Universidad Europea del Atlántico (2015–2019)</p>
-    </div>
-  </div>
-</section>
+  <section id="experiencia">
+    <h2>Experiencia</h2>
+    <p>Edición, cámara y postproducción: VoragineTV, IFOMO Noticias, UFI Apettece, Producciones Guerra, Antes de Morir Films, Popular TV, Nacho Solana.</p>
+    <p>Otros empleos: Dependienta/cajera (Primark, Decathlon, Mercadona, Supeco, Regma, IFEMA), monitor de ocio y tiempo libre, ayudante de lavandería industrial.</p>
+    <button class="back-button" onclick="goBack()">◀ Volver</button>
+  </section>
 
-<section id="experiencia">
-  <h2>Experiencia</h2>
-  <div class="card">
-    <h3>Edición, cámara y postproducción</h3>
-    <p>VoragineTV (2022), IFOMO Noticias (2021), Asociación UFI Apettece (2020–2023), Producciones Guerra (2019), Antes de Morir Films (2018), Popular TV (2017), Nacho Solana (2017)</p>
-  </div>
-  <div class="card">
-    <h3>Otros empleos</h3>
-    <p>Dependienta y cajera (Primark, Decathlon, Mercadona, Supeco, Regma, IFEMA), monitor de ocio y tiempo libre, ayudante en lavandería industrial (2015–2025)</p>
-  </div>
-</section>
+  <section id="habilidades">
+    <h2>Habilidades Técnicas</h2>
+    <p>Java, SQL, HTML, CSS, MySQL, SQLite, MongoDB, Android Studio, Git.</p>
+    <p>Adobe Premiere, After Effects, Maya, Houdini, Nuke, Photoshop.</p>
+    <p>Metodologías ágiles, resolución de problemas, trabajo en equipo.</p>
+    <button class="back-button" onclick="goBack()">◀ Volver</button>
+  </section>
 
-<section id="habilidades">
-  <h2>Habilidades técnicas</h2>
-  <div class="grid">
-    <div class="card">
-      <div class="skill"><i class="fab fa-java"></i> Java</div>
-      <div class="skill"><i class="fas fa-database"></i> SQL</div>
-      <div class="skill"><i class="fab fa-html5"></i> HTML</div>
-      <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-    </div>
-    <div class="card">
-      <div class="skill"><i class="fas fa-database"></i> MySQL</div>
-      <div class="skill"><i class="fas fa-database"></i> SQLite</div>
-      <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
-    </div>
-    <div class="card">
-      <div class="skill"><i class="fas fa-laptop-code"></i> IntelliJ</div>
-      <div class="skill"><i class="fas fa-mobile-alt"></i> Android Studio</div>
-      <div class="skill"><i class="fas fa-laptop"></i> Visual Studio</div>
-      <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
-    </div>
-    <div class="card">
-      <div class="skill"><i class="fas fa-video"></i> Adobe Premiere</div>
-      <div class="skill"><i class="fas fa-film"></i> After Effects</div>
-      <div class="skill"><i class="fas fa-cube"></i> Maya</div>
-      <div class="skill"><i class="fas fa-cube"></i> Houdini</div>
-      <div class="skill"><i class="fas fa-image"></i> Photoshop</div>
-    </div>
-    <div class="card">
-      <div class="skill"><i class="fas fa-users"></i> Scrum / Trabajo en equipo</div>
-      <div class="skill"><i class="fas fa-lightbulb"></i> Resolución de problemas</div>
-    </div>
-  </div>
-</section>
+  <section id="idiomas">
+    <h2>Idiomas</h2>
+    <p>Español: Nativo</p>
+    <p>Inglés: B2</p>
+    <button class="back-button" onclick="goBack()">◀ Volver</button>
+  </section>
 
-<section id="demoreel">
-  <h2>DemoReel</h2>
-  <div class="card">
-    <p> Demo reel de la carrera en CICE de animación 3D/VFX</p>
+  <section id="formacion">
+    <h2>Formación</h2>
+    <p>DAM - IES Miguel Herrero (2023 - Actualidad)</p>
+    <p>Carrera Animación 3D y VFX - CICE (2019-2021)</p>
+    <p>Grado en Comunicación Audiovisual - Universidad Europea del Atlántico (2015-2019)</p>
+    <button class="back-button" onclick="goBack()">◀ Volver</button>
+  </section>
+
+  <section id="demoreel">
+    <h2>DemoReel</h2>
+    <p>Demo reel de la carrera en CICE de animación 3D/VFX</p>
     <iframe src="https://www.youtube.com/embed/-0KeYTG1FXk" allowfullscreen></iframe>
-  </div>
-</section>
+    <button class="back-button" onclick="goBack()">◀ Volver</button>
+  </section>
 
-<section id="contacto">
-  <h2>Contacto</h2>
-  <a href="https://github.com/csuarezr2301" class="button" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-  <a href="https://www.linkedin.com/in/carmen-suarez-ria%C3%B1o-179646162/" class="button" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-  <a href="mailto:suricarmen@gmail.com" class="button"><i class="fas fa-envelope"></i> Email</a>
-</section>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:suricarmen@gmail.com">suricarmen@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/csuarezr2301" target="_blank">csuarezr2301</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/carmen-suarez-ria%C3%B1o-179646162/" target="_blank">Perfil</a></p>
+    <button class="back-button" onclick="goBack()">◀ Volver</button>
+  </section>
 
+  <script>
+    function showSection(id) {
+      document.getElementById('menu').style.display = 'none';
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function goBack() {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById('menu').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
-
 
 
 
