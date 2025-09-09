@@ -50,7 +50,7 @@
     }
 
     .menu button:hover {
-      color: #ff3333;
+      color: #ff3333; /* rojo al pasar */
       text-shadow: 0 0 8px #ff3333, 0 0 15px #ff3333;
       transform: scale(1.05);
     }
@@ -59,7 +59,7 @@
     section {
       display: none;
       padding: 40px 15%;
-      text-align: center;
+      text-align: left;
       animation: fadeIn 1s;
     }
 
@@ -83,6 +83,7 @@
       margin-top: 25px;
       margin-bottom: 10px;
       text-shadow: 0 0 8px #ff0, 0 0 15px #ff0;
+      text-align: center;
     }
 
     section p {
@@ -90,6 +91,7 @@
       color: #eee;
       margin: 6px 0 15px 0;
       line-height: 1.6;
+      text-align: center;
     }
 
     .back-button {
@@ -121,6 +123,37 @@
       margin-top: 20px;
       box-shadow: 0 0 20px #f0f;
     }
+
+    /* --- BARRAS DE HABILIDADES --- */
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill span {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #ff0;
+      text-shadow: 0 0 6px #ff0;
+      text-align: center;
+    }
+
+    .bar {
+      width: 100%;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      height: 16px;
+      box-shadow: 0 0 5px #444 inset;
+    }
+
+    .level {
+      height: 100%;
+      background: linear-gradient(90deg, #ff3333, #ff8800);
+      box-shadow: 0 0 10px #ff3333, 0 0 20px #ff8800;
+      border-radius: 10px;
+      transition: width 1s ease-in-out;
+    }
   </style>
 </head>
 <body>
@@ -138,9 +171,9 @@
     <button onclick="showSection('contacto')">▶ Contacto</button>
   </div>
 
+  <!-- EXPERIENCIA -->
   <section id="experiencia">
     <h2>Experiencia</h2>
-
     <h3>Edición, cámara y postproducción:</h3>
     <p>VoragineTV, IFOMO Noticias, UFI Apettece, Producciones Guerra, Antes de Morir Films, Popular TV, Nacho Solana.</p>
 
@@ -150,48 +183,53 @@
     <button class="back-button" onclick="goBack()">◀ Volver</button>
   </section>
 
+  <!-- HABILIDADES -->
   <section id="habilidades">
     <h2>Habilidades Técnicas</h2>
 
     <h3>Programación y Bases de Datos</h3>
-    <p>Java, SQL, HTML, CSS, MySQL, SQLite, MongoDB, Android Studio, Git.</p>
+    <div class="skill"><span>Java</span><div class="bar"><div class="level" style="width:60%"></div></div></div>
+    <div class="skill"><span>SQL</span><div class="bar"><div class="level" style="width:60%"></div></div></div>
+    <div class="skill"><span>HTML/CSS</span><div class="bar"><div class="level" style="width:40%"></div></div></div>
+    <div class="skill"><span>MySQL / SQLite</span><div class="bar"><div class="level" style="width:60%"></div></div></div>
+    <div class="skill"><span>MongoDB</span><div class="bar"><div class="level" style="width:40%"></div></div></div>
+    <div class="skill"><span>Android Studio</span><div class="bar"><div class="level" style="width:60%"></div></div></div>
+    <div class="skill"><span>Git</span><div class="bar"><div class="level" style="width:40%"></div></div></div>
 
     <h3>Software Creativo</h3>
-    <p>Adobe Premiere, After Effects, Maya, Houdini, Nuke, Photoshop.</p>
+    <div class="skill"><span>Adobe Premiere</span><div class="bar"><div class="level" style="width:90%"></div></div></div>
+    <div class="skill"><span>After Effects</span><div class="bar"><div class="level" style="width:75%"></div></div></div>
+    <div class="skill"><span>Maya</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
+    <div class="skill"><span>Houdini</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
+    <div class="skill"><span>Nuke</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
+    <div class="skill"><span>Photoshop</span><div class="bar"><div class="level" style="width:40%"></div></div></div>
 
     <h3>Otras Competencias</h3>
-    <p>Metodologías ágiles, resolución de problemas, trabajo en equipo.</p>
+    <div class="skill"><span>Metodologías ágiles</span><div class="bar"><div class="level" style="width:60%"></div></div></div>
+    <div class="skill"><span>Resolución de problemas</span><div class="bar"><div class="level" style="width:75%"></div></div></div>
+    <div class="skill"><span>Trabajo en equipo</span><div class="bar"><div class="level" style="width:90%"></div></div></div>
 
     <button class="back-button" onclick="goBack()">◀ Volver</button>
   </section>
 
+  <!-- IDIOMAS -->
   <section id="idiomas">
     <h2>Idiomas</h2>
-
-    <h3>Español</h3>
-    <p>Nativo</p>
-
-    <h3>Inglés</h3>
-    <p>B2</p>
-
+    <h3>Español</h3><p>Nativo</p>
+    <h3>Inglés</h3><p>B2</p>
     <button class="back-button" onclick="goBack()">◀ Volver</button>
   </section>
 
+  <!-- FORMACIÓN -->
   <section id="formacion">
     <h2>Formación</h2>
-
-    <h3>DAM</h3>
-    <p>IES Miguel Herrero (2023 - Actualidad)</p>
-
-    <h3>Carrera Animación 3D y VFX</h3>
-    <p>CICE (2019-2021)</p>
-
-    <h3>Grado en Comunicación Audiovisual</h3>
-    <p>Universidad Europea del Atlántico (2015-2019)</p>
-
+    <h3>DAM</h3><p>IES Miguel Herrero (2023 - Actualidad)</p>
+    <h3>Carrera Animación 3D y VFX</h3><p>CICE (2019-2021)</p>
+    <h3>Grado en Comunicación Audiovisual</h3><p>Universidad Europea del Atlántico (2015-2019)</p>
     <button class="back-button" onclick="goBack()">◀ Volver</button>
   </section>
 
+  <!-- DEMOREEL -->
   <section id="demoreel">
     <h2>DemoReel</h2>
     <p>Demo reel de la carrera en CICE de animación 3D/VFX</p>
@@ -199,18 +237,12 @@
     <button class="back-button" onclick="goBack()">◀ Volver</button>
   </section>
 
+  <!-- CONTACTO -->
   <section id="contacto">
     <h2>Contacto</h2>
-
-    <h3>Email</h3>
-    <p><a href="mailto:suricarmen@gmail.com" style="color:#0ff; text-decoration:none;">suricarmen@gmail.com</a></p>
-
-    <h3>GitHub</h3>
-    <p><a href="https://github.com/csuarezr2301" target="_blank" style="color:#0ff; text-decoration:none;">csuarezr2301</a></p>
-
-    <h3>LinkedIn</h3>
-    <p><a href="https://www.linkedin.com/in/carmen-suarez-ria%C3%B1o-179646162/" target="_blank" style="color:#0ff; text-decoration:none;">Perfil</a></p>
-
+    <h3>Email</h3><p><a href="mailto:suricarmen@gmail.com" style="color:#0ff; text-decoration:none;">suricarmen@gmail.com</a></p>
+    <h3>GitHub</h3><p><a href="https://github.com/csuarezr2301" target="_blank" style="color:#0ff; text-decoration:none;">csuarezr2301</a></p>
+    <h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/carmen-suarez-ria%C3%B1o-179646162/" target="_blank" style="color:#0ff; text-decoration:none;">Perfil</a></p>
     <button class="back-button" onclick="goBack()">◀ Volver</button>
   </section>
 
@@ -222,13 +254,11 @@
     }
     function goBack() {
       document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
-      document.getElementById('menu').style.display = 'flex'; // 🔹 vuelve en columna
+      document.getElementById('menu').style.display = 'flex';
     }
   </script>
 </body>
 </html>
-
-
 
 
 
