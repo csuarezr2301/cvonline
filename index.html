@@ -10,12 +10,21 @@
 <body>
   <!-- Pantalla inicial -->
   <div id="start-screen">
+    <!-- Barra superior estilo arcade -->
+    <div class="arcade-top">
+      <span class="arcade-text">1UP</span>
+      <span class="arcade-text center">HI-SCORE 00795679</span>
+      <span class="arcade-text">2UP</span>
+    </div>
+
     <h1 class="start-title">START CV</h1>
     <div class="arcade-box">
       <h2 class="player-name">CARMEN SUÁREZ RIAÑO</h2>
       <img src="img/foto.jpeg" alt="Foto de Carmen" class="player-photo" onclick="startCV()">
-      <p class="credit">CREDIT 012</p>
     </div>
+
+    <!-- Credit en la esquina inferior derecha -->
+    <span class="credit-bottom">CREDIT 028</span>
   </div>
 
   <!-- Contenido del CV -->
@@ -34,7 +43,6 @@
       <button onclick="showSection('contacto')">▶ Contacto</button>
       <button class="back-button" onclick="backToStart()">◀ Volver al inicio</button>
     </div>
-
 
     <!-- SECCIONES -->
     <section id="experiencia">
