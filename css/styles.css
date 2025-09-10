@@ -239,7 +239,7 @@ iframe {
 .player-name {
   font-family: 'Press Start 2P', cursive;
   color: #0ff;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #00f;
+  /* text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #00f; */ /* eliminado neón azul */
   font-size: 18px;
   margin-bottom: 15px;
 }
