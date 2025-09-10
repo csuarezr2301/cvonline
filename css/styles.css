@@ -178,15 +178,29 @@ iframe {
   justify-content: space-between;
   padding: 0 30px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 14px;
   color: #ff0;
   text-shadow: 0 0 8px #ff0, 0 0 15px #ff6600;
 }
 
-.arcade-top .center {
+.arcade-left, .arcade-right {
+  font-size: 18px;
+}
+
+.arcade-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 18px;
+}
+
+.credit-bottom {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 14px;
+  font-family: 'Press Start 2P', cursive;
+  color: #ff0;
+  text-shadow: 0 0 8px #ff0, 0 0 15px #ff6600;
 }
 
 /* START CV */
