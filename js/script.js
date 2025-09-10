@@ -13,3 +13,8 @@ function goBack() {
   document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
   document.getElementById('menu').style.display = 'flex';
 }
+
+function backToStart() {
+  document.getElementById('cv-content').style.display = 'none';
+  document.getElementById('start-screen').style.display = 'flex';
+}
