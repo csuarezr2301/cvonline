@@ -187,38 +187,34 @@ iframe {
   position: relative;
 }
 
-/* Barra arcade arriba */
+/* Contenedor central de la pantalla inicial */
+.start-box {
+  width: 500px;           /* ancho del “cuadro” */
+  max-width: 90%;         /* adaptable en móviles */
+  padding: 30px;
+  background: rgba(0,0,0,0.7); /* franja semitransparente */
+  border: 4px solid #0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #00f inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Barra arcade dentro del cuadro */
 .arcade-top {
-  position: absolute;
-  top: 15px;
-  width: 100%;
+  width: 100%;             /* ahora solo el ancho del cuadro */
   display: flex;
   justify-content: space-between;
-  padding: 0 30px;
+  margin-bottom: 20px;
   font-family: 'Press Start 2P', cursive;
   color: #ff0;
   text-shadow: 0 0 8px #ff0, 0 0 15px #ff6600;
 }
 
-.arcade-left, .arcade-right {
-  font-size: 18px;
-}
-
-.arcade-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 18px;
-}
-
-.credit-bottom {
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
-  font-size: 14px;
-  font-family: 'Press Start 2P', cursive;
-  color: #ff0;
-  text-shadow: 0 0 8px #ff0, 0 0 15px #ff6600;
+.arcade-left, .arcade-right, .arcade-center {
+  font-size: 16px;         /* más pequeño que antes */
 }
 
 /* START CV */
@@ -228,7 +224,7 @@ iframe {
   color: orange;
   text-shadow: 0 0 10px orange, 0 0 20px #ff6600, 0 0 40px #ff3300;
   margin-bottom: 40px;
-  margin-top: 80px;
+  margin-top: 20px;        /* menos margen superior */
 }
 
 /* Caja central */
@@ -263,7 +259,7 @@ iframe {
   transform: scale(1.1);
 }
 
-/* CREDIT abajo a la derecha */
+/* CREDIT abajo a la derecha dentro del cuadro */
 .credit-bottom {
   position: absolute;
   bottom: 20px;
@@ -273,6 +269,7 @@ iframe {
   color: #ff0;
   text-shadow: 0 0 8px #ff0, 0 0 15px #ff6600;
 }
+
 #cv-content {
   display: none;
 }
