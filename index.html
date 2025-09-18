@@ -3,95 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum - Carmen Suárez Riaño</title>
+  <title>Carmen Suárez Riaño - CV</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Pantalla inicial -->
   <div id="start-screen">
-  <div class="start-box">
-    <!-- Barra superior estilo arcade -->
-    <div class="arcade-top">
-      <span class="arcade-left">1UP</span>
-      <span class="arcade-center">HI-SCORE 00795679</span>
-      <span class="arcade-right">2UP</span>
+    <div class="hud">
+      <span class="hud-left">1UP</span>
+      <span class="hud-right">2UP</span>
     </div>
-
-    <h1 class="start-title">START CV</h1>
-    <div class="arcade-box">
-      <h2 class="player-name">CARMEN SUÁREZ RIAÑO</h2>
-      <img src="img/foto.jpeg" alt="Foto de Carmen" class="player-photo" onclick="startCV()">
+    <div class="hud-center">HI-SCORE 00795679</div>
+    <h1 class="title">Carmen Suárez Riaño</h1>
+    <div class="avatar">
+      <img src="assets/foto.jpeg" alt="Foto de Carmen">
     </div>
-
-    <!-- Credit en la esquina inferior derecha -->
-    <span class="credit-bottom">CREDIT 028</span>
+    <button id="start-btn">START CV</button>
+    <div class="credit">CREDIT 028</div>
   </div>
-</div>
 
-
-  <!-- Contenido del CV -->
-  <div id="cv-content">
+  <!-- Contenido principal -->
+  <div id="main-content" class="hidden">
     <header>
-      <h1>Carmen Suárez Riaño</h1>
-      <p>Curriculum</p>
+      <h1>Curriculum</h1>
     </header>
 
-    <div class="menu" id="menu">
+    <nav class="menu">
       <button onclick="showSection('experiencia')">▶ Experiencia</button>
       <button onclick="showSection('habilidades')">▶ Habilidades</button>
       <button onclick="showSection('idiomas')">▶ Idiomas</button>
       <button onclick="showSection('formacion')">▶ Formación</button>
       <button onclick="showSection('demoreel')">▶ DemoReel</button>
       <button onclick="showSection('contacto')">▶ Contacto</button>
-      <button class="back-button" onclick="backToStart()">◀ Volver al inicio</button>
-    </div>
+      <button class="back-main" onclick="goBackToStart()">◀ Volver</button>
+    </nav>
 
-    <!-- SECCIONES -->
-    <section id="experiencia">
+    <section id="experiencia" class="content-section hidden">
       <h2>Experiencia</h2>
-      <h3>Edición, cámara y postproducción:</h3>
+      <h3>Edición, cámara y postproducción</h3>
       <p>VoragineTV, IFOMO Noticias, UFI Apettece, Producciones Guerra, Antes de Morir Films, Popular TV, Nacho Solana.</p>
-      <h3>Otros empleos:</h3>
+      <h3>Otros empleos</h3>
       <p>Dependienta/cajera (Primark, Decathlon, Mercadona, Supeco, Regma, IFEMA), monitor de ocio y tiempo libre, ayudante de lavandería industrial.</p>
       <button class="back-button" onclick="goBack()">◀ Volver</button>
     </section>
 
-    <section id="habilidades">
+    <section id="habilidades" class="content-section hidden">
       <h2>Habilidades Técnicas</h2>
-      <h3>Programación y Bases de Datos</h3>
+      <!-- Ejemplo barra -->
       <div class="skill-row"><span>Java</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
       <div class="skill-row"><span>SQL</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
       <div class="skill-row"><span>HTML/CSS</span><div class="bar"><div class="level" style="width:30%"></div></div></div>
-      <div class="skill-row"><span>MySQL / SQLite</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
-      <div class="skill-row"><span>MongoDB</span><div class="bar"><div class="level" style="width:40%"></div></div></div>
-      <div class="skill-row"><span>Android Studio</span><div class="bar"><div class="level" style="width:60%"></div></div></div>
-      <div class="skill-row"><span>Git</span><div class="bar"><div class="level" style="width:40%"></div></div></div>
-
-      <h3>Software Creativo</h3>
-      <div class="skill-row"><span>Adobe Premiere</span><div class="bar"><div class="level" style="width:85%"></div></div></div>
-      <div class="skill-row"><span>After Effects</span><div class="bar"><div class="level" style="width:70%"></div></div></div>
-      <div class="skill-row"><span>Maya</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
-      <div class="skill-row"><span>Houdini</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
-      <div class="skill-row"><span>Nuke</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
-      <div class="skill-row"><span>Photoshop</span><div class="bar"><div class="level" style="width:40%"></div></div></div>
-
-      <h3>Otras Competencias</h3>
-      <div class="skill-row"><span>Metodologías ágiles</span><div class="bar"><div class="level" style="width:60%"></div></div></div>
-      <div class="skill-row"><span>Resolución de problemas</span><div class="bar"><div class="level" style="width:75%"></div></div></div>
-      <div class="skill-row"><span>Trabajo en equipo</span><div class="bar"><div class="level" style="width:90%"></div></div></div>
-
+      <!-- Resto de habilidades aquí -->
       <button class="back-button" onclick="goBack()">◀ Volver</button>
     </section>
 
-    <section id="idiomas">
+    <section id="idiomas" class="content-section hidden">
       <h2>Idiomas</h2>
       <h3>Español</h3><p>Nativo</p>
       <h3>Inglés</h3><p>B2</p>
       <button class="back-button" onclick="goBack()">◀ Volver</button>
     </section>
 
-    <section id="formacion">
+    <section id="formacion" class="content-section hidden">
       <h2>Formación</h2>
       <h3>DAM</h3><p>IES Miguel Herrero (2023 - Actualidad)</p>
       <h3>Carrera Animación 3D y VFX</h3><p>CICE (2019-2021)</p>
@@ -99,14 +73,14 @@
       <button class="back-button" onclick="goBack()">◀ Volver</button>
     </section>
 
-    <section id="demoreel">
+    <section id="demoreel" class="content-section hidden">
       <h2>DemoReel</h2>
       <p>Demo reel de la carrera en CICE de animación 3D/VFX</p>
       <iframe src="https://www.youtube.com/embed/-0KeYTG1FXk" allowfullscreen></iframe>
       <button class="back-button" onclick="goBack()">◀ Volver</button>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" class="content-section hidden">
       <h2>Contacto</h2>
       <h3>Email</h3><p><a href="mailto:suricarmen@gmail.com">suricarmen@gmail.com</a></p>
       <h3>GitHub</h3><p><a href="https://github.com/csuarezr2301" target="_blank">csuarezr2301</a></p>
@@ -115,6 +89,6 @@
     </section>
   </div>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

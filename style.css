@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: url("assets/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Pantalla inicial */
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.hud {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  padding: 0 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: #ff0;
+  font-size: 14px;
+}
+.hud-left { float: left; }
+.hud-right { float: right; }
+
+.hud-center {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Press Start 2P', cursive;
+  color: #ff0;
+  font-size: 14px;
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 28px;
+  color: #ff8800;
+  text-shadow: 0 0 10px #ff8800, 0 0 20px #ff4400;
+  margin-bottom: 20px;
+}
+
+.avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ff8800;
+  box-shadow: 0 0 15px #ff8800;
+}
+
+#start-btn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: #000;
+  background: #ff8800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff8800, 0 0 20px #ff4400;
+  transition: transform 0.2s ease;
+}
+#start-btn:hover { transform: scale(1.1); }
+
+.credit {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: #ff0;
+  font-size: 12px;
+}
+
+/* Contenido principal */
+.hidden { display: none; }
+
+header h1 {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  margin-top: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.menu button {
+  all: unset;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #ff0;
+  cursor: pointer;
+  text-shadow: 0 0 5px #ff0, 0 0 15px #ff0;
+}
+.menu button:hover {
+  color: #ff3333;
+  text-shadow: 0 0 8px #ff3333, 0 0 15px #ff3333;
+}
+
+.content-section {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  animation: fadeIn 1s;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.back-button, .back-main {
+  margin-top: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #0ff;
+  border: 2px solid #0ff;
+  background: transparent;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #0ff;
+}
+.back-button:hover, .back-main:hover {
+  background: rgba(0,255,255,0.2);
+}
+
+/* Barras de habilidades */
+.skill-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.skill-row span {
+  width: 150px;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+}
+.bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.level {
+  height: 100%;
+  background: linear-gradient(90deg, #ff3333, #ff8800);
+  box-shadow: 0 0 10px #ff3333, 0 0 20px #ff8800;
+}
