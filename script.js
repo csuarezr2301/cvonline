@@ -1,18 +1,8 @@
-document.getElementById("start-btn").addEventListener("click", () => {
-  document.getElementById("start-screen").style.display = "none";
-  document.getElementById("main-content").classList.remove("hidden");
+// Scroll suave para navegación
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(e.target.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
 });
-
-function showSection(id) {
-  document.querySelectorAll(".content-section").forEach(sec => sec.classList.add("hidden"));
-  document.getElementById(id).classList.remove("hidden");
-}
-
-function goBack() {
-  document.querySelectorAll(".content-section").forEach(sec => sec.classList.add("hidden"));
-}
-
-function goBackToStart() {
-  document.getElementById("main-content").classList.add("hidden");
-  document.getElementById("start-screen").style.display = "flex";
-}

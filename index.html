@@ -3,91 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carmen Suárez Riaño - CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Carmen Suárez Riaño - CV Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Pantalla inicial -->
-  <div id="start-screen">
-    <div class="hud">
-      <span class="hud-left">1UP</span>
-      <span class="hud-right">2UP</span>
-    </div>
-    <div class="hud-center">HI-SCORE 00795679</div>
-    <h1 class="title">Carmen Suárez Riaño</h1>
-    <div class="avatar">
-      <img src="assets/foto.jpeg" alt="Foto de Carmen">
-    </div>
-    <button id="start-btn">START CV</button>
-    <div class="credit">CREDIT 028</div>
-  </div>
-
-  <!-- Contenido principal -->
-  <div id="main-content" class="hidden">
-    <header>
-      <h1>Curriculum</h1>
-    </header>
-
-    <nav class="menu">
-      <button onclick="showSection('experiencia')">▶ Experiencia</button>
-      <button onclick="showSection('habilidades')">▶ Habilidades</button>
-      <button onclick="showSection('idiomas')">▶ Idiomas</button>
-      <button onclick="showSection('formacion')">▶ Formación</button>
-      <button onclick="showSection('demoreel')">▶ DemoReel</button>
-      <button onclick="showSection('contacto')">▶ Contacto</button>
-      <button class="back-main" onclick="goBackToStart()">◀ Volver</button>
+  <!-- NAV -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Carmen Suárez Riaño</h1>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#education">Formación</a></li>
+        <li><a href="#demoreel">DemoReel</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <section id="experiencia" class="content-section hidden">
-      <h2>Experiencia</h2>
-      <h3>Edición, cámara y postproducción</h3>
-      <p>VoragineTV, IFOMO Noticias, UFI Apettece, Producciones Guerra, Antes de Morir Films, Popular TV, Nacho Solana.</p>
-      <h3>Otros empleos</h3>
-      <p>Dependienta/cajera (Primark, Decathlon, Mercadona, Supeco, Regma, IFEMA), monitor de ocio y tiempo libre, ayudante de lavandería industrial.</p>
-      <button class="back-button" onclick="goBack()">◀ Volver</button>
-    </section>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <img src="assets/foto.jpeg" alt="Foto de Carmen" class="profile-pic">
+      <h2>Hola, soy Carmen 👋</h2>
+      <p>Creativa y técnica, con experiencia en edición, VFX y conocimientos en programación.</p>
+    </div>
+  </section>
 
-    <section id="habilidades" class="content-section hidden">
-      <h2>Habilidades Técnicas</h2>
-      <!-- Ejemplo barra -->
-      <div class="skill-row"><span>Java</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
-      <div class="skill-row"><span>SQL</span><div class="bar"><div class="level" style="width:50%"></div></div></div>
-      <div class="skill-row"><span>HTML/CSS</span><div class="bar"><div class="level" style="width:30%"></div></div></div>
-      <!-- Resto de habilidades aquí -->
-      <button class="back-button" onclick="goBack()">◀ Volver</button>
-    </section>
+  <!-- SOBRE MÍ -->
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>
+      Me apasiona combinar creatividad y tecnología. Tengo experiencia en edición, animación 3D/VFX
+      y un perfil técnico con conocimientos en programación y bases de datos.
+    </p>
+  </section>
 
-    <section id="idiomas" class="content-section hidden">
-      <h2>Idiomas</h2>
-      <h3>Español</h3><p>Nativo</p>
-      <h3>Inglés</h3><p>B2</p>
-      <button class="back-button" onclick="goBack()">◀ Volver</button>
-    </section>
+  <!-- EXPERIENCIA -->
+  <section id="experience">
+    <h2>Experiencia</h2>
+    <h3>Edición, cámara y postproducción</h3>
+    <p>VoragineTV, IFOMO Noticias, UFI Apettece, Producciones Guerra, Antes de Morir Films, Popular TV, Nacho Solana.</p>
 
-    <section id="formacion" class="content-section hidden">
-      <h2>Formación</h2>
-      <h3>DAM</h3><p>IES Miguel Herrero (2023 - Actualidad)</p>
-      <h3>Carrera Animación 3D y VFX</h3><p>CICE (2019-2021)</p>
-      <h3>Grado en Comunicación Audiovisual</h3><p>Universidad Europea del Atlántico (2015-2019)</p>
-      <button class="back-button" onclick="goBack()">◀ Volver</button>
-    </section>
+    <h3>Otros empleos</h3>
+    <p>Dependienta/cajera (Primark, Decathlon, Mercadona, Supeco, Regma, IFEMA), monitor de ocio y tiempo libre, ayudante de lavandería industrial.</p>
+  </section>
 
-    <section id="demoreel" class="content-section hidden">
-      <h2>DemoReel</h2>
-      <p>Demo reel de la carrera en CICE de animación 3D/VFX</p>
-      <iframe src="https://www.youtube.com/embed/-0KeYTG1FXk" allowfullscreen></iframe>
-      <button class="back-button" onclick="goBack()">◀ Volver</button>
-    </section>
+  <!-- HABILIDADES -->
+  <section id="skills">
+    <h2>Habilidades</h2>
 
-    <section id="contacto" class="content-section hidden">
-      <h2>Contacto</h2>
-      <h3>Email</h3><p><a href="mailto:suricarmen@gmail.com">suricarmen@gmail.com</a></p>
-      <h3>GitHub</h3><p><a href="https://github.com/csuarezr2301" target="_blank">csuarezr2301</a></p>
-      <h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/carmen-suarez-ria%C3%B1o-179646162/" target="_blank">Perfil</a></p>
-      <button class="back-button" onclick="goBack()">◀ Volver</button>
-    </section>
-  </div>
+    <h3>Programación y Bases de Datos</h3>
+    <ul>
+      <li>Java (Intermedio)</li>
+      <li>SQL (Intermedio)</li>
+      <li>HTML/CSS (Básico)</li>
+      <li>MySQL / SQLite (Intermedio)</li>
+      <li>MongoDB (Básico)</li>
+      <li>Android Studio (Intermedio)</li>
+      <li>Git (Básico)</li>
+    </ul>
+
+    <h3>Software Creativo</h3>
+    <ul>
+      <li>Adobe Premiere (Avanzado)</li>
+      <li>After Effects (Intermedio-Avanzado)</li>
+      <li>Maya (Básico-Intermedio)</li>
+      <li>Houdini (Básico-Intermedio)</li>
+      <li>Nuke (Básico-Intermedio)</li>
+      <li>Photoshop (Básico)</li>
+    </ul>
+
+    <h3>Otras Competencias</h3>
+    <ul>
+      <li>Metodologías ágiles (Intermedio)</li>
+      <li>Resolución de problemas (Intermedio-Avanzado)</li>
+      <li>Trabajo en equipo (Avanzado)</li>
+    </ul>
+  </section>
+
+  <!-- FORMACIÓN -->
+  <section id="education">
+    <h2>Formación</h2>
+    <p><strong>DAM</strong> - IES Miguel Herrero (2023 - Actualidad)</p>
+    <p><strong>Carrera Animación 3D y VFX</strong> - CICE (2019-2021)</p>
+    <p><strong>Grado en Comunicación Audiovisual</strong> - Universidad Europea del Atlántico (2015-2019)</p>
+  </section>
+
+  <!-- DEMOREEL -->
+  <section id="demoreel">
+    <h2>DemoReel</h2>
+    <iframe src="https://www.youtube.com/embed/-0KeYTG1FXk" allowfullscreen></iframe>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:suricarmen@gmail.com">suricarmen@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/csuarezr2301" target="_blank">csuarezr2301</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/carmen-suarez-ria%C3%B1o-179646162/" target="_blank">Perfil</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Carmen Suárez Riaño</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
