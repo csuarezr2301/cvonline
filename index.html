@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carmen Suárez Riaño - CV Online</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Librería para animaciones -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
   <!-- NAV -->
@@ -25,15 +27,17 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-up">
       <img src="assets/foto.jpeg" alt="Foto de Carmen" class="profile-pic">
-      <h2>Hola, soy Carmen 👋</h2>
-      <p>Creativa y técnica, con experiencia en edición, VFX y conocimientos en programación.</p>
+      <div>
+        <h2>Hola, soy Carmen 👋</h2>
+        <p>Creativa y técnica, con experiencia en edición, VFX y conocimientos en programación.</p>
+      </div>
     </div>
   </section>
 
   <!-- SOBRE MÍ -->
-  <section id="about">
+  <section id="about" data-aos="fade-right">
     <h2>Sobre mí</h2>
     <p>
       Me apasiona combinar creatividad y tecnología. Tengo experiencia en edición, animación 3D/VFX
@@ -42,7 +46,7 @@
   </section>
 
   <!-- EXPERIENCIA -->
-  <section id="experience">
+  <section id="experience" data-aos="fade-left">
     <h2>Experiencia</h2>
     <h3>Edición, cámara y postproducción</h3>
     <p>VoragineTV, IFOMO Noticias, UFI Apettece, Producciones Guerra, Antes de Morir Films, Popular TV, Nacho Solana.</p>
@@ -52,40 +56,46 @@
   </section>
 
   <!-- HABILIDADES -->
-  <section id="skills">
+  <section id="skills" data-aos="fade-up">
     <h2>Habilidades</h2>
 
-    <h3>Programación y Bases de Datos</h3>
-    <ul>
-      <li>Java (Intermedio)</li>
-      <li>SQL (Intermedio)</li>
-      <li>HTML/CSS (Básico)</li>
-      <li>MySQL / SQLite (Intermedio)</li>
-      <li>MongoDB (Básico)</li>
-      <li>Android Studio (Intermedio)</li>
-      <li>Git (Básico)</li>
-    </ul>
+    <div class="skill-category">
+      <h3>Programación y Bases de Datos</h3>
+      <ul>
+        <li>Java (Intermedio)</li>
+        <li>SQL (Intermedio)</li>
+        <li>HTML/CSS (Básico)</li>
+        <li>MySQL / SQLite (Intermedio)</li>
+        <li>MongoDB (Básico)</li>
+        <li>Android Studio (Intermedio)</li>
+        <li>Git (Básico)</li>
+      </ul>
+    </div>
 
-    <h3>Software Creativo</h3>
-    <ul>
-      <li>Adobe Premiere (Avanzado)</li>
-      <li>After Effects (Intermedio-Avanzado)</li>
-      <li>Maya (Básico-Intermedio)</li>
-      <li>Houdini (Básico-Intermedio)</li>
-      <li>Nuke (Básico-Intermedio)</li>
-      <li>Photoshop (Básico)</li>
-    </ul>
+    <div class="skill-category">
+      <h3>Software Creativo</h3>
+      <ul>
+        <li>Adobe Premiere (Avanzado)</li>
+        <li>After Effects (Intermedio-Avanzado)</li>
+        <li>Maya (Básico-Intermedio)</li>
+        <li>Houdini (Básico-Intermedio)</li>
+        <li>Nuke (Básico-Intermedio)</li>
+        <li>Photoshop (Básico)</li>
+      </ul>
+    </div>
 
-    <h3>Otras Competencias</h3>
-    <ul>
-      <li>Metodologías ágiles (Intermedio)</li>
-      <li>Resolución de problemas (Intermedio-Avanzado)</li>
-      <li>Trabajo en equipo (Avanzado)</li>
-    </ul>
+    <div class="skill-category">
+      <h3>Otras Competencias</h3>
+      <ul>
+        <li>Metodologías ágiles (Intermedio)</li>
+        <li>Resolución de problemas (Intermedio-Avanzado)</li>
+        <li>Trabajo en equipo (Avanzado)</li>
+      </ul>
+    </div>
   </section>
 
   <!-- FORMACIÓN -->
-  <section id="education">
+  <section id="education" data-aos="fade-right">
     <h2>Formación</h2>
     <p><strong>DAM</strong> - IES Miguel Herrero (2023 - Actualidad)</p>
     <p><strong>Carrera Animación 3D y VFX</strong> - CICE (2019-2021)</p>
@@ -93,13 +103,13 @@
   </section>
 
   <!-- DEMOREEL -->
-  <section id="demoreel">
+  <section id="demoreel" data-aos="zoom-in">
     <h2>DemoReel</h2>
     <iframe src="https://www.youtube.com/embed/-0KeYTG1FXk" allowfullscreen></iframe>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contacto</h2>
     <p>Email: <a href="mailto:suricarmen@gmail.com">suricarmen@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/csuarezr2301" target="_blank">csuarezr2301</a></p>
@@ -110,6 +120,11 @@
     <p>© 2025 Carmen Suárez Riaño</p>
   </footer>
 
+  <!-- Librería animaciones -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
